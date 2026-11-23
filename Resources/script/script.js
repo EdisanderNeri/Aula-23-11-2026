@@ -1,6 +1,8 @@
 async  function dados () {
     const api = await fetch ("https://jsonplaceholder.typicode.com/users")
-        console.log (await api.json)
+        if(api.status === 200){
+            console.log (api)
+        }
 }
 
 await dados()
